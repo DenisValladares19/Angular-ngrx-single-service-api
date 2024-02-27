@@ -1,0 +1,13 @@
+<div class="container">
+  @for (item of characters$ | async; track $index) {
+  <div class="card">
+    <img [src]="item.image" [alt]="item.name">
+    <div class="description">
+      <div class="text title">{{item.name | formatName }}</div>
+      <div class="text">Estado: {{item.status}}</div>
+      <div class="text">Genero: {{item.gender}}</div>
+
+    </div>
+  </div>
+  }
+</div>
